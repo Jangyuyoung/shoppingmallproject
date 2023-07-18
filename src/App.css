@@ -1,38 +1,108 @@
-.App {
-  text-align: center;
+
+*{
+  margin: 0;
+  padding: 0;
+}
+.App{
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  padding: auto;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.navBar{
+  border: 1px solid black;
+  position: relative;
+  position: fixed;
+  padding: 5px;
+  height: 100%;
+  width: 20%;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  z-index: 5;
 }
 
-.App-link {
-  color: #61dafb;
+.main{
+  border: 1px solid black;
+  width: 80%;
+  margin-left: 385px;
+  position: inherit;
+  background-image: url(img/main1.png);
+  background-size: cover;
+  background-position: center;
+  height : 500px;
+  box-sizing: border-box;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+li{
+  list-style: none;
+}
+
+.popup{
+  margin-top: 50px;
+  padding-top: 100px;
+  background-color: #eee;
+  text-align: center;
+  
+  width: 200px;
+  height: 200px;
+  margin-left: 500px;
+}
+
+.mypage {
+  margin-top: 100px;
+}
+
+.category, .notice{
+  margin-top: 50px;
+}
+
+.logo{
+  text-align: center;
+  margin-top: 20px;
+}
+
+.text{
+
+  font-size: 50px;
+}
+
+.flow-container{
+  z-index: 0;
+  margin-left: 385px;
+}
+.flow-text {
+  display: flex;
+    flex: 0 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: 0.3s;
+    font-size: 2.0rem;
+    font-weight:bold;
+    color: #9D9993;
+}
+.flow-text:hover {
+  color: #000;
+  font-size: 2.5rem;
+}
+.flow-text:hover .flow-wrap {
+  animation-play-state: paused;
+  cursor: pointer;
+}
+.flow-wrap {
+  animation: textLoop 10s linear infinite;
+  padding-right: 1.4881vw;
+}
+
+@keyframes textLoop {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
   }
 }
+
